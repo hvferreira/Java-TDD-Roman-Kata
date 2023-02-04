@@ -7,12 +7,17 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RomanNumConvertTest {
 
-    RomanNumConvert aux = new RomanNumConvert();
+    RomanNumConvert romanNum = new RomanNumConvert();
 
     @ParameterizedTest
-    @CsvFileSource(resources = "/data.csv", numLinesToSkip = 1)
-    void numToRoman(int num, String roman) {
-        assertEquals(roman, aux.numConverterRoman(num));
+    @CsvFileSource(resources = "/romanPass.csv", numLinesToSkip = 1)
+    void numToRomanPass(int num, String roman) {
+        assertEquals(roman, romanNum.numConverterRoman(num));
     }
 
+    @ParameterizedTest
+    @CsvFileSource(resources = "/romanFail.csv", numLinesToSkip = 1)
+    void numToRomanFail(int num, String roman) {
+        assertEquals(roman, romanNum.numConverterRoman(num));
+    }
 }
