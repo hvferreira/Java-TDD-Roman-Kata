@@ -12,12 +12,14 @@ class NumRomanConvertTest {
 
     @ParameterizedTest
     @CsvFileSource(resources = "/numPass.csv", numLinesToSkip = 1)
+        //for cases work
     void numToRomanPass(String roman, int num) {
         assertEquals(num, numRoman.romanConverterNum(roman));
     }
 
     @ParameterizedTest
     @CsvFileSource(resources = "/numFail.csv", numLinesToSkip = 1)
+        //for cases out limites
     void numToRomanFail(String roman, int num) {
         assertEquals(num, numRoman.romanConverterNum(roman));
     }

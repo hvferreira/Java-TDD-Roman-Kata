@@ -2,9 +2,9 @@ package org.example;
 
 public class RomanNumConvert {
 
-    private final String FAIL = "-1";
-    private final int LOWER = 1;
-    private final int UPPER = 3999;
+    private final String FAIL = "-1"; // out limites
+    private final int LOWER = 1; //lower numb to convert
+    private final int UPPER = 3999; // higher numb to convert
 
     public String numConverterRoman(int num) {
 
@@ -28,5 +28,5 @@ public class RomanNumConvert {
         return thousandThreeThousand[num / 1000] + hundredNineHundred[(num % 1000) / 100] + tenNinety[(num % 100) / 10] + oneNine[num % 10];//1999
         //                          ->      1    <-                       ->      9    <-                ->      9    <-        ->      9    <-
     }
-    
+
 }
